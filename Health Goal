@@ -1,0 +1,97 @@
+  <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Health Tracker</title> 
+    <style> 
+        body { 
+            background-image: url('https://th.bing.com/th/id/OIP.8XLECwYGdt3DBa45yi83RAHaE8?rs=1&pid=ImgDetMain'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            color: rgb(50, 205, 89); 
+            box-sizing: border-box; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+        } 
+        
+        #goal-form { 
+            background-color: #887ad0; 
+            border-radius: 8px; 
+            width: 300px; 
+            text-align: center; 
+            padding: 20px; 
+            box-sizing: border-box; 
+            margin: 10px; 
+        } 
+        
+        .form-group { 
+            margin-bottom: 20px; 
+        } 
+        
+        .form-group label { 
+            display: block; 
+            font-weight: bold; 
+            margin-bottom: 5px; 
+        } 
+        
+        .form-group input { 
+            width: 100%; 
+            padding: 10px; 
+            box-sizing: border-box; 
+            border: 4px solid #6470bd; 
+            border-radius: 4px; 
+        } 
+        
+        .form-group button { 
+            background-color: #3498db; 
+            color: #fff; 
+            border: none; 
+            padding: 10px 15px; 
+            border-radius: px; 
+            cursor: pointer; 
+            font-size: 16px; 
+        } 
+        
+        .form-group button:hover { 
+            background-color: #2980b9; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <div id="goal-form"> 
+        <h2>Health Goals</h2> 
+        <div class="form-group"> 
+            <label for="goalType">Goal Type:</label> 
+            <input type="text" id="goalType" name="goalType" placeholder="e.g., Weight Loss"> 
+        </div> 
+        <div class="form-group"> 
+            <label for="target">Target:</label> 
+            <input type="text" id="target" name="target" placeholder="e.g., 10 kg"> 
+        </div> 
+        <div class="form-group"> 
+            <label for="days">Number of Days:</label> 
+            <input type="number" id="days" name="days" placeholder="e.g., 30" min="1"> </div> 
+        <div class="form-group"> 
+            <label for="waterConsumption">Daily Water Consumption (Litre):</label> 
+            <input type="number" id="waterConsumption" name="waterConsumption" placeholder="e.g., 2000" min="0">  </div> 
+        <div class="form-group"> 
+            <button type="button" onclick="setGoal()">Set Goal</button> 
+        </div> 
+    </div> 
+
+    <script>
+        function setGoal() {
+            var goalType = document.getElementById('goalType').value;
+            var target = document.getElementById('target').value;
+            var days = document.getElementById('days').value;
+            var waterConsumption = document.getElementById('waterConsumption').value;
+            
+            alert("Goal Type: " + goalType + "\nTarget: " + target + "\nNumber of Days: " + days + "\nDaily Water Consumption: " + waterConsumption + "Litre");
+        }
+    </script>
+</body>
+</html>
